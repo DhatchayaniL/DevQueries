@@ -1,0 +1,330 @@
+.start{
+  margin-top: 70px;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(to right, #ff00ff, #ff0000, #ffff00);
+  
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: row;
+  padding: 4px 8px;
+}
+
+.pad{
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.codewin{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 16px;
+  padding-top: 16px;
+  gap: 16px; 
+}
+
+.codeelement {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* equivalent to w-full in Tailwind */
+  height: 100%; /* equivalent to h-full in Tailwind */
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.right-container {
+  display: flex;
+  flex-shrink: 0;
+  width: 30%;
+  flex-direction: column;
+}
+
+.flright-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.buttoncompile{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-width: 2px;
+  border-color:black;
+  z-index:10;
+  border-radius: 0.375rem;
+  box-shadow: 5px 5px 0px 0px rgba(0,0,0);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top:0.5rem;
+  padding-bottom: 0.5rem; 
+  transition: box-shadow 0.2 ease-in-out;
+  background-color:white;
+  flex-shrink: 0;
+}
+
+.opacity-50{
+  opacity: 0.5
+}
+
+.button {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+}
+
+.button:hover {
+  color: #212529;
+  text-decoration: none;
+}
+
+.button:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.button:disabled, .button.disabled {
+  opacity: 0.65;
+}
+
+.metrics-container {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.metrics-container-p{
+  font-size: small;
+}
+
+.outputstatus{
+  font-weight: 600;
+  padding:2px 4px;
+  border-radius: 4px;
+  background-color: #f3f4f6;
+}
+
+.output-window {
+  margin-bottom: 2rem;
+}
+
+.output-window-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #1f2937, #111827);
+  margin-bottom: 1rem;
+}
+
+.output-window-container {
+  width: 100%;
+  height: 14rem;
+  background-color: #1e293b;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: #fff;
+  overflow-y: auto;
+}
+
+.output-window-content-success{
+  padding: 0.5rem;
+  font-weight: normal;
+  font-size: 0.875rem;
+  color: #7ed957;
+}
+
+.output-window-content-error {
+  padding: 0.5rem;
+  font-weight: normal;
+  font-size: 0.875rem;
+  color: #ff7f7f;
+}
+
+.code-editor{
+  position: relative;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  font-family: "Courier New", courier, monospace;
+  /* padding: 1rem; */
+  /* resize: none; */
+  /* color: #333; */
+}
+
+.codeeditor.light{
+  background-color: #f8f9fa;
+}
+
+.codeeditor.dark{
+  background-color: #1e293b;
+  color: #fff;
+}
+
+.custom-class {
+  width: 100%;
+  border: 2px solid black;
+  z-index: 10;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.5);
+  padding: 8px 8px;
+  transition: box-shadow 200ms;
+  background-color: white;
+  margin-top: 2px;
+}
+
+.custom-class:focus {
+  outline: none;
+}
+
+.custom-class:hover {
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.5);
+}
+.toast {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+/* CodeEditorWindow */
+/* .CodeEditorWindow {
+  height: calc(100% - 200px);
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  box-sizing: border-box;
+  border: 1px solid #2d2d2d;
+  border-radius: 4px;
+}
+
+.CodeEditorWindow .CodeMirror {
+  height: 100%;
+  font-family: monospace;
+}
+
+.CodeEditorWindow .CodeMirror-gutters {
+  border-right: none;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+}
+
+.CodeEditorWindow .CodeMirror-linenumber {
+  padding: 0 10px;
+}
+
+.CodeEditorWindow .CodeMirror-linenumbers {
+  border-right: none;
+}
+
+.CodeEditorWindow .CodeMirror-scrollbar-filler,
+.CodeEditorWindow .CodeMirror-gutter-filler {
+  background-color: #1e1e1e;
+}
+
+.CodeEditorWindow .CodeMirror-cursor {
+  border-left: 1px solid white;
+}
+
+.CodeEditorWindow .CodeMirror-selected {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* OutputWindow */
+/* .OutputWindow {
+  height: 150px;
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow: auto;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  box-sizing: border-box;
+  border: 1px solid #2d2d2d;
+  border-radius: 4px;
+}
+
+.OutputWindow pre {
+  margin: 0;
+  padding: 5px;
+  white-space: pre-wrap;
+}
+
+/* CustomInput */
+/* .CustomInput {
+  margin: 10px 0 0 0;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  box-sizing: border-box;
+  border: 1px solid #2d2d2d;
+  border-radius: 4px;
+  resize: none;
+}
+
+/* OutputDetails */
+/* .OutputDetails {
+  margin: 10px 0 0 0;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  box-sizing: border-box;
+  border: 1px solid #2d2d2d;
+  border-radius: 4px;
+} */
+
+/* ThemeDropdown */
+/* .ThemeDropdown {
+  margin: 10px 0;
+} */
+
+/* LanguageDropdown */
+/* .LanguageDropdown {
+  margin: 20px 20px;
+} */
+
+/* Footer */
+/* .Footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  box-sizing: border-box;
+  border: 1px
+}  */
