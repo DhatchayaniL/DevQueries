@@ -65,7 +65,7 @@ const Landing = () => {
           "Content-Type": "application/json",
           "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com",
           "X-RapidAPI-Key":
-            "83761a3689mshc4776c737db81aap1d9186jsn1599908d15a9",
+            process.env.REACT_APP_RAPID_API_KEY,
         },
       })
       .then(function (response) {
@@ -132,7 +132,7 @@ const Landing = () => {
         {
           headers: {
             "X-RapidAPI-Key":
-              "83761a3689mshc4776c737db81aap1d9186jsn1599908d15a9",
+              process.env.REACT_APP_RAPID_API_KEY,
             "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com",
           },
         }
