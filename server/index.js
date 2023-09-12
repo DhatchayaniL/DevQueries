@@ -18,9 +18,9 @@ app.use(cors());
 //     res.send("This is a stack overflow clone API")
 // })
 
-app.use("/api/v1/user", userRoutes);
-app.use("/api/v1/questions", questionRoutes);
-app.use("/api/v1/answer", answerRoutes);
+app.use("/user", userRoutes);
+app.use("/questions", questionRoutes);
+app.use("/answer", answerRoutes);
 
 const PORT = process.env.PORT || 5000;
 
